@@ -1,0 +1,39 @@
+html,body{height: 100%;}
+header nav, .container {max-width: 1170px; margin: 0 auto;}
+.row > [class$='1']{background-color:#b6ff00;}
+.row > [class$='2']{background-color:#00ff82;}
+.row > [class$='3']{background-color:#0094ff;}
+.row > [class$='4']{background-color:#ff00dc;}
+.row > [class$='5']{background-color:#0cf;}
+.row > [class$='6']{background-color: #b91646;}
+.row > [class$='7']{background-color:#dfd8ca;}
+.row > [class$='8']{background-color:#fbf3e4;}
+
+
+@media screen and (max-width:767px){
+    /* mabile */
+}
+@media screen and (min-width:768px) and (max-width:1279px){
+    /* tablite */
+}
+@media screen and (min-width:1280px){
+    /* pc */
+    header{background-color: white; position: fixed; width: 100%;}
+    header nav {padding: 10px 0;}
+    header nav ul li {display:inline-block; text-align: center; width: 19%;}
+    header nav #MUI_on,header nav ul li.mobileUI{display: none;}
+    header nav ul li a{
+        text-decoration: none;
+        font-size: 14px;
+        color: rgb(139, 138, 138);
+        padding: 20px;
+        display: inline-block;
+    }
+    header nav ul li:hover a {
+        background-color: #0094ff; border:5px solid #0094ff; 
+        color: white; border-radius: 10px 0 10px 0;
+    }
+
+    .container {padding-top: 85px;}
+
+}

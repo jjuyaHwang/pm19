@@ -1,0 +1,57 @@
+body{position: relative;}
+
+.circle{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-color: tomato;
+    animation-name: moveCircle;
+    animation-duration: 2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count:infinite;
+    
+
+}
+
+
+@keyframes moveCircle {
+    /* from{
+        left : 0; transform: rotate(0deg);
+    }to{
+        left: 800px; transform: rotate(360deg);
+    } */
+    0%{
+        left : 0; transform: rotate(0deg);
+    }50%{  
+        left: 800px; transform: rotate(360deg);
+    }100%{
+        left : 0; transform: rotate(0deg);
+    }
+}
+
+/* 
+    ?animation
+    * 1. 대상요소에 animation-name으로 keyframe set(moveCircle). (css = 소수점 두자리 까지.)
+    * 2. duration으로 재생시간 설정.
+    * 3. timing-function 으로 가속도 설정.
+    * 4. iteration-count 로 반복 횟수 설정.(infinite = 무한)
+    * 5. direction으로 재생방향설정(iteration-count 필요.)
+
+
+    @keyframes
+    * 0~100% 사이 소수점 포함 입력 가능
+    * keyframes start = from, end = to, 나머지는 %
+
+
+*/
+
+/*
+
+    transform 에 입력한 변환함수 들은 앞쪽부터 차례로 적용된다.
+    rotate(deg) : 특정 각도만큼  회전한다.
+    translate(X,Y) : 특정 크기만큼 해당 축 방향으로 이동.
+    skew(X,Y) : 특정 각도만큼 해당 축 방향으로 기울임.
+    scale(X,Y) : 특정 배율만큼 해당 축 방향으로 확대 및 축소한다.
+    transform-origin : X축값,Y축값
+*/
