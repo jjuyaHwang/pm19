@@ -44,3 +44,10 @@
 
 */
 
+// case.1  name 이란 변수안에 여러분의 이름을 담아보시오.
+var name = "황주현", age = 99;
+
+console.log(name, age);
+alert(name);
+
+

@@ -1,5 +1,5 @@
 function test(){
-    document.write('hi' + '<br>' + 'js');
+    document.write();
 
 }
 
