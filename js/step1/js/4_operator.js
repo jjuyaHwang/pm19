@@ -39,3 +39,69 @@ function numbOP1(){
     var a = 10;
     console.log(a + 10);
 }
+
+// * case.2 변수 a 에  50값을 담아지정하기,\
+// * 변수 b 에 20값을 담아지정하기.
+// * 변수 a 와 변수 b 를 곱한 값을 result 라는 변수안에 담기
+function numbOP2(){
+    var a = 50;
+    var b = 20;
+    var result = a*b;
+    console.log(result);
+}
+
+
+// * case.3 변수 a 에 hi 라는 값을 담아지정하기,
+// *        변수 b 에 web 이라는 값을 담아지정하기,
+//* 합쳐서 hi web 을 출력.
+function stringOP(){
+    var a = 'hi';
+    var b = 'web';
+    console.log(a + b);
+}
+
+
+
+// * case.3 ul, li 구조의 태그를 html 페이지에 삽입 후 출력.
+// function operatorEX(){
+//     var list = '';
+//     list += '<ul>';
+//     list += '<li>test</li>'
+//     list += '</ul>'
+
+//     console.log('<ul>' + '<li>test</li>' + '</ul>');
+
+// }
+
+
+function numberPlusAfter(){
+    var number = 10; //? 변수 선언 및 초기화
+    alert(number++); 
+    // alert(++number); 
+    // alert(++number); 
+}
+
+
+// * case.4 변수 a 에 40 값을 담아
+// * console에 a = 40 이라고 출력하기.
+function compareOpaerator(){
+    var a = 40;
+    console.log("a =" + a);
+}
+
+
+//* case.5 숫자 10이 담긴 변수 a 와 숫자 20이 담긴 변수 b 의 크기를 비교하여 결과를 출력.
+function compareOpaerator1(){
+    var a = 10;
+    var b = 20;
+    var result = a < b;
+    console.log('10 < 20 = ' + result);
+}
+
+//* case.6  숫자 10이 담긴 변수a 와 숫자 20이 담긴 변수b 가 같은지 비교하여 결과를 출력. 
+function compareOpaerator2(){
+    var a = 10;
+    var b = 20;
+    var result = a == b;
+    console.log('10 = 20 = ' + result);  //거짓
+}
