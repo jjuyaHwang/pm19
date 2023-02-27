@@ -76,10 +76,11 @@ function stringOP(){
 
 function numberPlusAfter(){
     var number = 10; //? 변수 선언 및 초기화
-    alert(number++); 
-    // alert(++number); 
-    // alert(++number); 
-}
+    alert(number++); // 10 (11) 
+    alert(number++); // 11 (12)
+    alert(number++); // 12 (13)
+    console.log(number); // 13
+} 
 
 
 // * case.4 변수 a 에 40 값을 담아
