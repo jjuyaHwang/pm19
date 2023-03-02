@@ -16,6 +16,7 @@
     
 */
 
+
 // *case.1 현재시간이 오후인가 오전인가ㅣ
 function amORpn(){
     var date = new Date();
