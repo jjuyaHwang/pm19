@@ -9,19 +9,19 @@
 */
 
 // *exp.1 패스워드 '1234'가 입력되면 '접속승인', 아니면 ' 잘못 입력하였습니다.'
-// function pwCheck(){
-//      while(true){
-//         var value = window.prompt("패스워드를 입력하세요.");
+function pwCheck(){
+     while(true){
+        var value = window.prompt("패스워드를 입력하세요.");
 
-//         if(value==1234){
-//             alert('접속승인');
-//             break;    
-//         }else{
-//             alert('잘못 입력하였습니다.');
-//         }
+        if(value==1234){
+            alert('접속승인');
+            break;    
+        }else{
+            alert('잘못 입력하였습니다.');
+        }
         
-//      }
-// }
+     }
+}
 
 
 // *exp.2 while Continue
@@ -40,3 +40,13 @@ function whileContinue(){
 
 
 // * class01 ~ class07
+
+
+// * 구구단만들기 9단이하로만 입력받기. ex> 9단이 넘어 갈시 '9단 이하로 입력하세요.'
+
+
+
+
+
+
+
