@@ -1,0 +1,22 @@
+h1 {
+    font-size: 15px; 
+    color:red;
+}
+
+img {
+    color: orange;
+}
+
+ul li{
+    font-weight: bold;
+    font-size: 50px;
+}
+
+ul,ol {
+    color: brown;
+}
+
+dl dd{
+    font-weight: bold;
+    font-size: 50px;
+}
