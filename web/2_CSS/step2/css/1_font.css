@@ -6,3 +6,16 @@
 body{
     font-family: 'Nanum Gothic', sans-serif;
 }
+
+h1 {
+    font-size: 20px; 
+    line-height: 25px;
+    color: blue;
+}
+/* ? font-size 제일 기본 값이 16px */
+/* 
+    ? font가 들어가는 부분은 무조건 line-height를 설정해야 하는데,
+    ? 그 이유는 block 속성이 아닌 태그들에게 line-height 를 지정하지않게 되면 폰트의 영역이
+    ? (컨텐츠의 영역이) 무시되는 경우가 있으며, block 속성이라 하여도, text가 길 경우 
+    ? 줄바꿈이 이루어졌을때 윗줄과 아랫줄의 줄간이 없어 글자들이 붙거나 겹치는 현상이 있기때문이다.
+ */
