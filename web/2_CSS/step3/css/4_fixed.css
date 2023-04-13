@@ -1,0 +1,17 @@
+*{margin: 0; padding: 0;}
+html, body{height: 100%;}
+body > div {
+    background-color: white;
+    padding: 5%;
+    margin-bottom: 15%;
+}
+body > div h2 {
+    font-size: 38px;
+    margin-bottom: 20px;
+}
+
+/* * example.jpg 이 이미지를 깔아준 뒤 이미지는 한번만 나오게 깔아주기
+    *  이미지의 위치는 가운데로 설정 
+    * 이미지의 크기는 꽉채움으로 설정한 뒤 고정시켜주기
+    * body 에 설정 
+*/
