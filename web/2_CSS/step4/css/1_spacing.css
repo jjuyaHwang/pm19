@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+}
+
+.firstDiv {
+    background-color: darksalmon;
+    margin-top: 10px; /* ! body 입장에서 padding 이기 때문에 잘못된 케이스 */
+    margin-left: 10px; /* ! body 입장에서 padding 이기 때문에 잘못된 케이스 */
+    margin-right: 10px; /* ! body 입장에서 padding 이기 때문에 잘못된 케이스 */
+    margin-bottom: 10px;
+
+    /* * margin : 상 우 하 좌; - 값을 4개 적을 경우 
+       * margin : 상하 좌우; - 값을 2개 적을 경우
+       * margin : 상하좌우 동일하게; - 값을 1개 적을 경우
+    */
+}
+
+.firstDiv article {
+    background-color: #039;
+    color: white;
+}
+
+.secondDiv{
+    background-color: #333;
+    color: white;
+    margin: 30px 15px;
+    /*
+        ! firstDiv의 margin-bottom:10px 상쇄.
+        ? secondDiv의 margin과 만나는 부분에서 가산없이 병합.
+        * margin을 사용할떄에는 한 뱡향으로 사용해주는 것이 적합.
+    */
+}
+
+.secondDiv article {
+    background-color: red;
+    margin: 10px;
+
+    /*
+        * margin-bottom이 비 적용 된것을 확인할 수 있다. (경계선 너머 적용)
+        * 그렇기 때문에 부모요소가 자손요소에게 padding을 사용함이 바람직 하다.
+    */
+}
+
+.centerDiv {
+    width: 300px;
+    margin: 0 auto;
+
+    /*
+        * 0(상하) auto(좌우)는 좌측과 우측에 browser가
+        * 자신의 width - 대상의 width/2 를 통해 공통 마진을 부여.
+    */
+
+    text-align: center;
+    border: 1px solid #333;
+    padding: 10px;
+
+    /*
+        ! padding과 border 는 본래 대상의 크기에 가산된다.
+    */
+}
+
+.centerDiv article {
+    margin: 0 10px;
+    /* ! margin 과 부모의 padding은 섞이지 않는다. 무조건 가산됨 */
+    background-color: wheat;
+}
+
+.paddingDiv {
+    padding: 10px 20px;
+    border: 3px solid #333;
+    background-color: tan;
+    width: 100px;
+    box-sizing: border-box;
+
+    /* ! box-sizing : border-box; 를 설정하면  padding 및 border 의 사이즈는  
+       ! 더이상 width에 가산되지않는다. */
+
+}
+
+.paddingDiv article {
+    background-color: aquamarine;
+}
