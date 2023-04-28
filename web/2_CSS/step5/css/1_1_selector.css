@@ -1,0 +1,9 @@
+/* 
+    *   :first-child  - 부모안에 모든 요소 중 첫번째 요소
+    *   :last-child   - 부모안에 모든 요소 중 마지막 요소
+    *   A:nth-child(N) - 부모안에 A라는 요소 중 N번쨰 요소
+
+    *   A:first-of-type - 부모안에 A라는 요소 중 첫번쨰 요소
+    *   A:last-of-type  - 부모안에 A라는 요소 중 마지막 요소
+    *   A:nth-of-type   -  부모안에 A라는 요소 중 N번째 요소
+*/
