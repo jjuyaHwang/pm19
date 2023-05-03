@@ -7,3 +7,32 @@
     *   A:last-of-type  - 부모안에 A라는 요소 중 마지막 요소
     *   A:nth-of-type   -  부모안에 A라는 요소 중 N번째 요소
 */
+
+* {
+    margin: 0;
+}
+
+span{
+    display: block;
+}
+
+span,p {
+    width: 50px;
+    height: 50px;
+    float: left;
+    border: 1px solid #333;
+}
+
+p:nth-of-type(2){
+    background-color: red;
+}
+
+/*
+    * (odd)   -   홀수 선택
+    * (even)  -   짝수 선택
+    * (2n)    -   두번째 마다 선택
+    * (2n+1)  -   첫번쨰 요소부터 2번쨰 마다 선택
+    * :nth-child(n+3):nth-child(-n+8)
+    * - 4 , 7 , 5 , 6
+ */
+
