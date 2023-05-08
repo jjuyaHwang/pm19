@@ -1,0 +1,121 @@
+html {
+    height: 100%;
+}
+body{
+    margin: 0;
+    height: 100%;
+    background-color: black;
+}
+
+body > div {
+    width: 50%;
+    height: 50%;
+    background-color: #262626;
+    position: absolute;
+    left: 25%;
+    top: 25%;
+
+}
+
+body div nav {
+    margin-bottom: 25px;
+}
+
+body div nav ul {
+    margin: 0;
+    padding: 0;
+}
+
+body div nav ul::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+body div nav ul li {
+    float: left; 
+    width: 25%;
+    display: block;
+    background-color: #3b3b3b;
+}
+
+body div nav ul li a {
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    font-size: 12px;
+    padding: 10px 0;
+    color: #ea0e52;
+}
+
+body div nav ul li.currentStat a,
+body div nav ul li a:hover {
+    background-color: #ea0e52;
+    color: white;
+}
+
+body div h1 {
+    font-size: 14px;
+    color: white;
+    text-align: center;
+}
+
+body div fieldset {
+    border: none;
+    padding: 0;
+    width: 90%;
+    margin: 0 auto;
+}
+
+body div fieldset ul  {
+    margin: 0;
+    padding: 0;
+}
+
+body div fieldset ul li {
+    display: block;
+}
+
+body div fieldset ul li:first-of-type {
+    margin-bottom: 25px;
+}
+
+body div fieldset ul li label {
+    width: 15%;
+    display: block;
+    float: left;
+    text-align: center;
+    background-color: #ea0e52;
+    font-size: 12px;
+    font-weight: bold;
+    color: white;
+    padding: 12px 0;
+}
+
+body div fieldset ul li input {
+    width: 80%;
+    padding: 12px 2.5%;
+    font-size: 12px;
+    border: none;
+}
+
+body div fieldset ul li input:focus {
+    background-color: #ea0e52;
+}
+
+body div input[type='submit'] {
+    width: 90%;
+    margin: 0 auto;
+    border: none;
+    display: block;
+    padding: 10px 0;
+    background-color: #3e3e3e;
+    color: #ea0e52;
+}
+
+body div input[type='submit']:hover {
+    background-color: #ea0e52;
+    color: black;
+    cursor: pointer;
+}
