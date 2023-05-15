@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자 일람</title>
+    <link rel="stylesheet" href="css/1_selector.css">
+</head>
+<body>
+    <div class="tagSelector">
+        <h1>h1 태그를 지목하여 css를 삽입 (font, color : 20px green)</h1>
+        <p>p태그를 지목하여 css를 삽입 (font, color : 15px red)</p>
+        <span>span 태그를 지목하여 css를 삽입 (font, color : 10px yellow)</span>
+    </div>
+
+    <div class="idSelector">
+        <p id="paragraph1">
+            paragraph 1번 아이디를 지목 하여 css를 삽입
+            (font, backgroundcolor : 20px green)
+        </p>
+        <p id="paragraph2">
+            paragraph 2번 아이디를 지목 하여 css를 삽입
+            (font, backgroundcolor : 10px orange)
+        </p>
+        <p id="paragraph3">
+            paragraph 3번 아이디를 지목 하여 css를 삽입
+            (font, backgroundcolor : 20px blue)
+        </p>
+    </div>
+
+    <div class="classSelector">
+        <p class="f_size">f_size 클래스로 font size만 변경</p>
+        <p class="f_size f_weight">f_size 클래스로 font size만 변경, f_weight클래스로 굵기변경</p>
+        <p class="f_size f_weight f_color">f_size 클래스로 font size만 변경, f_weight클래스로 굵기변경, f_color로 색상 변경</p>
+    </div>
+
+    <div class="sameSelector">
+        <h1>heading -1</h1>
+        <h2>heading -2</h2>
+        <h3>heading -3</h3>
+        <h3>heading -3</h3>
+        <h2>heading -2</h2>
+        <h1>heading -1</h1>
+    </div>
+
+    <div class="stringAttrSelector">
+        <img src="https://via.placeholder.com/150.png" alt="undefined">
+        <img src="https://via.placeholder.com/150.jpg" alt="undefined">
+        <img src="https://via.placeholder.com/150.gif" alt="undefined">
+        <h1 title="탈의실제목남자">남자</h1>
+        <h1 title="남자탈의실">탈의실</h1>
+        <h1 title="제목탈의실여자">여자</h1>
+        <h1 title="탈의실-여자">탈의실</h1>
+        
+    </div>
+
+    <div class="statusSelector">
+        <input type="checkbox" id="statusTest">
+        <label for="statusTest">눌러보세요. 사라집니다.</label>
+        <input type="text" enabled placeholder="수정가능상태. click해봐요!">
+        <input type="password" disabled placeholder="수정불가능상태">
+    </div>
+
+    <div class="virtualSelector">
+        <ul>
+            <li>1</li>
+            <li>2</li>
+            <li>3</li>
+            <li>4</li>
+            <li>5</li>
+            <li>6</li>
+            <li>7</li>
+        </ul>
+    </div>
+</body>
+</html>
