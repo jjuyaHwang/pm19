@@ -1,0 +1,60 @@
+/* 
+    * code diet 기본
+    * code를 최적화 시키기 위해서는 일단 자신이 설계한 구조를
+    * 잘 읽을 줄 알아야 하고,
+    * 자신이 설계한 구조 내에서
+    * 1. 동일한 부모 객체인가?
+    * 2. 동일한 마크업 or ID or CLASS 인가?
+    * 3. 동일하게 반복되는 규정 (ex> width, height, 
+    *    margin, padding ...)이 있는가?
+    * 4. 위에 세개의 조건을 모두 충족 한다면,
+    *    동일한 부모 내의 마크업 or ID or CLASS를 지정해서 동일반복되는
+    *    규정을 한번만 입력하여 최적화 시킬 수 있다.
+ */
+
+
+body {
+    margin: 0;
+}
+
+.emLayout {
+    width: 75em;
+    margin: 0 auto;
+    font-size: 15px;
+}
+
+header {
+    background-color: yellowgreen;
+    padding: 0.667em;
+}
+
+section::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+section > * {
+    height: 50em;
+    float: left;
+}
+
+section aside {
+    width: 15em;
+    background-color: red;
+}
+section article{
+    width: 30em;
+    background-color: blueviolet;
+}
+section article.sub_article {
+    width: 30em;
+    background-color: turquoise;
+}
+
+footer {
+    text-align: center;
+    padding: 1em;
+    background-color: cadetblue;
+}

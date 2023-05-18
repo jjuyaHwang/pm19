@@ -33,17 +33,20 @@
     line-height: 1em;
  }
 
+ .emLayout article,
+ .emLayout article h2{
+   margin-bottom: 0.667em;
+ }
 
- .emLayout article {
+ .emLayout article,
+ .emLayout article h2 {
     padding: 2em;
-    margin-bottom: 0.667em;
     background-color: orange;
     font-size: 10px;
  }
 
  .emLayout article h2 {
     font-size: 1.5em;
-    margin-bottom: 0.667em;
  }
  .emLayout article p {
     font-size: 0.75em;
