@@ -100,6 +100,8 @@ div {
   .opacityProperty ul li figure img {
     width: 100%;
     display: block;
+    opacity: 0.3;
+    transition-duration: 0.5s;
   }
 
   .opacityProperty ul li figure figcaption {
@@ -111,9 +113,73 @@ div {
     left: 37.5%;
     top: 42.5%;
     padding: 5%;
+    transition-duration: 0.5s;
+  }
+
+  .opacityProperty ul li:hover figure img{
+    opacity: 1;
+  }
+
+  .opacityProperty ul li:hover figure figcaption{
+    top: -15%;
+    opacity: 0;
+  }
+
+  .boxsizingProperty div {
+    width: 500px;
+    margin: 0 auto;
+    border: 10px solid orangered;
+    background-color: slategray;
+    padding: 50px;
+  }
+
+  .boxsizingProperty div:first-child {
+    box-sizing: content-box;
+  }
+  .boxsizingProperty div:last-child {
+    box-sizing: border-box;
   }
 
 
+  /*
+    * content-box 속성은 기본적으로 적용되는 (default)값,
+    * 안의 공간을 해당 width로 잡고 밖에 padding, border를 추가
+    * 계산하여 총 width 를 구하는방식
+    
+    
+    * border-box 속성은 전체 크기를 먼저 width를 잡고 안의 padding, border 를 나중에 계산하는 
+    
+    * content-box : box in width + padding + border = width
+    * border-box : width = box in width - (padding + border)
+   */
+
+   .shadowProperty h1 {
+    text-shadow: 5px 10px 10px rgba(0, 0, 0, 0.5);
+   }
+
+   .shadowProperty p {
+    width: 300px;
+    height: 300px;
+    border: 3px solid #f00;
+   }
+
+   .shadowProperty p:first-of-type {
+    box-shadow: 8px 10px 2px rgba(255, 145, 145, 0.5);
+   }
+
+   .shadowProperty p:last-of-type {
+    box-shadow: inset 8px 10px 2px rgba(255, 145, 145, 0.5);
+   }
+
+   /* 
+    * shadow: 우측으로 간격,
+    *         하단으로 간격,
+    *         흐림도(우측, 하단간격 너비의 영향 받음),
+    *         그림자 컬러 또한 속성값 앞에 inset을 삽입하면 내부그림자로 전환
+
+    * 보다 쉽게 만들기
+    * http://css3generator.com 에서 값입력후 소스코드생성
+    */
 
 
 
