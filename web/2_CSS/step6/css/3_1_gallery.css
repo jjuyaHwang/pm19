@@ -1,0 +1,99 @@
+body {
+    margin: 0;
+    background-color: #333;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    display: block;
+}
+
+.wrap {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.wrap header {
+    padding: 20px 0;
+    position: relative;
+}
+
+.wrap header nav {
+    position: absolute;
+    right: 0;
+    width: 40%;
+    top: 25px;
+}
+
+.wrap header h1 {
+    padding: 0;
+    margin: 0;
+    color: white;
+}
+
+.wrap header nav ul {
+    border-width: 1px 0; border-style: solid; border-color: #555;
+}
+
+.wrap header nav ul::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.wrap header nav ul li{
+    float: left;
+    width: 20%;
+    padding: 10px 0;
+}
+
+.wrap header nav ul li a {
+    font-size: 12px;
+    text-align: center;
+}
+
+.wrap header nav ul li:not(:first-child) a {
+    border-left: 1px solid white;
+}
+
+.wrap> ul::after {
+    content: '';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+.wrap> ul li {
+    float: left;
+    width: 30%;
+    margin-bottom: 5%;
+}
+
+.wrap> ul li:not(:nth-child(3n+1)){
+    margin-left: 5%;
+}
+
+.wrap> ul li a img {
+    width: 100%;
+    border: none;
+    opacity: 0.5;
+    transition-duration: 0.75s;
+}
+
+.wrap> ul li a:hover img{
+    opacity: 1;
+}
+
+.wrap footer {
+    font-size: 12px;
+    text-align: center;
+    color: #a1a1a1;
+}

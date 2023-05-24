@@ -1,0 +1,19 @@
+body {
+    margin: 0;
+}
+
+.durationEX1 { 
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    transition-duration: 2s;
+}
+
+.durationEX1:hover {
+    width: 200px;
+    height: 200px;
+}
+
+.durationEX2{
+
+}
