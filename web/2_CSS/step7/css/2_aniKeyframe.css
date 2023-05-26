@@ -1,0 +1,61 @@
+/* 
+    ? animation 
+    * 1. 대상요소에 animation-name 으로 keyframe set(moveCircle).(css = 소수점 두자리 까지.)
+    * 2. duration으로 재생시간 설정.
+    * 3. timing-function 으로 가속도 설정.
+    * 4. iteration-count 로 반복횟수 설정. (infinite = 무한)
+    * 5. direction 으로 재생방향설정 ( iteration-count 필요)
+ */
+
+ /* 
+    ? keyframes
+    * 0 ~ 100% 사이 소수점 포함 입력 가능
+    * keyframe start = from, end = to, 나머지 %
+    ! ex> 0 - 50% - 100% ( 예제 )
+    * rotate는 회전속성, deg는 각도를 뜻한다.
+ */
+
+ body {
+    margin: 0;
+    position: relative;
+ }
+
+ .circle {
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f85032+0,f16f5c+50,f6290c+51,f02f17+71,e73827+100;Red+Gloss+%231 */
+background: #f85032; /* Old browsers */
+background: -moz-linear-gradient(top,  #f85032 0%, #f16f5c 50%, #f6290c 51%, #f02f17 71%, #e73827 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  #f85032 0%,#f16f5c 50%,#f6290c 51%,#f02f17 71%,#e73827 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f85032', endColorstr='#e73827',GradientType=0 ); /* IE6-9 */
+
+    position: absolute;
+    animation-name: moveCircle;
+    animation-duration: 4s;
+    animation-iteration-count: infinite;
+    animation-timing-function: cubic-bezier(.11,.87,.94,.47);
+
+ }
+
+ @keyframes moveCircle {
+    /* from{
+        left: 0; transform: rotate(0deg);
+    }to{
+        left: 800px; transform: rotate(360deg);
+    } */
+    0%{
+        left: 0; transform: rotate(0deg);
+    }50%{
+        left: 500px; transform: rotate(360deg);
+    }100%{
+        left: 0; transform: rotate(0deg);
+    }
+ }
+
+ /* ? play-state : paused 중지, running 재생. */
+
+ .circle:hover {
+    animation-play-state: paused;
+ }
