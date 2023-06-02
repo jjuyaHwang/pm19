@@ -1,0 +1,36 @@
+body {
+    width: 200px;
+    margin: 200px auto;
+}
+
+div {
+    width: 200px;
+    position: relative;
+    transform: rotateX(50deg);
+    animation-name: rotate3D;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    transform-style: preserve-3d;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate3D {
+    from{
+        transform: rotateX(90deg) rotateY(60deg);
+    }to{
+        transform: rotateX(450deg) rotateY(60deg);
+    }
+}
+
+div span{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    opacity: 0.5;
+}
+
+div span:first-of-type{background-color: red;}
+div span:nth-of-type(2) {background-color: blue; transform-origin:left top; transform: rotateY(60deg);}
+div span:last-of-type{background-color: darkgreen; transform-origin:right top; transform: rotateY(-60deg); width: 100px;}
