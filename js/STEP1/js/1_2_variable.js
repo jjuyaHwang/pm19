@@ -40,6 +40,19 @@
     *     var globalVal = "함수2번내 지역변수";
     *     alert(globalVal);    
     *     }
+    
+
+    * 3. 매개변수 - 함수 외부에서 내부로 데이터를 전달할때, 사용 하는 변수.
+    * var globalVal = "전역변수";
+    * window.onload=function(){
+    *      var localVal = "지역변수";
+    *      func1(100,200);
+    * }
+    * 
+    * function func1(num1,num2){
+    *     var localVal = "지역변수";
+    *     document.write("매개변수 num1="+num1+",num2="+num2);
+    * }
 */
 
 // * 변수만들기 var 변수이름 = 값 ;
