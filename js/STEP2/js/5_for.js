@@ -29,3 +29,66 @@ function namePrint500(){
         document.write(i+"."+userName+"<br>");
     }
 }
+
+//todo.1 1 - 10 까지 출력되는 반복문을 직접 짜보자.
+//? 10보다 작을때 (0~9) 까지 만 반복 수행  (1~ 10번 까지 출력)
+function answer1(){
+    for(var i=0; i<10; i++){
+        document.write((i+1)+"<br>");
+    }
+}
+
+//? 10보다 작거나 같을때 (1~10)까지 만 반복 수행 (1~ 10번 까지 출력)
+function answer2(){
+    for(var i=1; i<=10; i++){
+        document.write(i+"<br>");
+    }
+}
+
+//? 110보다 작을때 (100~109)까지만 반복 수행  (1~ 10번 까지 출력)
+function answer3(){
+    for(var i=100; i<110; i++){
+        document.write((i-99)+"<br>");
+    }
+}
+
+//todo.2
+//? 10보다 작거나 같을때 (1~10)까지 만 반복 수행, 단 루프가 끝난후 i에 2를 더함.(증감부)
+//? 1, 3, 5, 7, 9 (증감이 이루어 지지 않은 iteration)
+//? 2, 4, 6, 8, 10 (증감이 이루어 진 이후 iteration)
+function answer4(){
+    for(var i=1; i<=10; i+=2){
+        document.write(i+"<br>");
+        document.write((i+1)+"<br>");
+    }
+}
+
+//? 1보다 크거나 같을때 (10~1)까지 만 반복 수행. (1~ 10번 까지 출력)
+function answer5(){
+    for(var i=10; i>=1; i--){
+        document.write((11-i)+"<br>");
+    }
+}
+
+
+//*ex.4 자신이 좋아하는 과일 4개를 배열로 배치하고, alert으로 출력하라.
+function favorFluit(){
+    // ? 배열(array)은 1개의 변수에 여러 개의 값을 순차적으로 저장할 때 사용한다.
+    //? 자바스크립트의 배열은 객체이며 유용한 내장 메소드를 포함하고 있다.
+    //? 배열(array) []  대괄호안에 배치해준다.
+    var array = ['망고' , '사과', '바나나', '복숭아'];
+    //! ex> ['data(0)','data(1)','data(2)','data(3)'];
+    for(var i = 0; i < array.length; i++){
+        alert(array[i]);
+    }
+}
+
+//*exp.5 지금까지 배웠던 JS를 배열을 활용해 출력해보자.
+//* 변수, 연산자, 형변환, 조건문 if, 조건문 switch, 반복문 for, 반복문 while
+//* document 에 (i 번째 내용 = array) 로 출력해보기.  
+function arrayForES6(){
+    var data = ["변수", "연산자", "형변환", "조건문 if", "조건문 switch", "반복문 for", "반복문 while"]
+    for(var i=0; i < data.length; i++){
+        document.write(i + "번쨰 내용 =" + data[i] + "<br>");
+    }
+}
