@@ -92,3 +92,90 @@ function arrayForES6(){
         document.write(i + "번쨰 내용 =" + data[i] + "<br>");
     }
 }
+
+//*exp.6 역반복 배열
+function reverseFavorFluit(){
+    var array = ['망고' , '사과', '바나나', '복숭아'];
+
+    for(var i = array.length - 1; i >= 0; i--){
+        document.write(array[i]);
+    }
+}
+
+//*exp.7 continue문
+function forContinue(){
+    for(var i = 0; i <= 10; i++){
+        continue; //? 위 조건이 참일 지라도 continue가 존재하면, continue이하 구문은 실행 되지않는다.
+        document.write(i+"<br>"); //? vscode 에서는 불투명하게 시각화해서 보여준다.
+    }
+    document.write("최종 i = "+ i + "<br>"); //? 최종적으로 변경된 i의 수치(11)만 출력된다.
+}
+
+//*exp.8 break문
+function forBreak(){
+    for(var i =1; i <=10; i++){
+        break; //? 위 조건이 참일 지라도 break가 존재하면, 반복루프에서 강제로 빠져나오게 된다.
+        document.write(i+"<br>"); //? vscode 에서는 불투명하게 시각화해서 보여준다.
+    }
+    document.write("최종 i = " + i + "<br>"); //? 루프가 실행되지않아, i = 1로 출력된다.
+}
+
+// todo.3 반절피라미드 만들어보기
+function halfPyramid(){
+    var star = "";
+    for(var i = 1; i <= 10; i++){ //? ifor = 1~10까지 수행
+        for(var j = 0; j < i; j++){ //? jfor =  j가 i보다 작을때까지 반복 수행 (*,**,***,****,.......)
+            star += "*";
+        }
+        star += "<br>"; //? ifor만큼 <br> 을 변수 star에 넣음
+    }
+    document.write(star); //? 반절피라미드 출력
+}
+
+//todo.4 역반절피라미드 만들어보기
+function reverseHalfPyramid(){
+    var star = "";
+    for(var i = 10; i>=1; i--){ //? ifor = 10~1까지 수행
+        for(var j = 0; j < i; j++){ //? jfor = j가 i 보다 작을떄까지 반복수행 (10,9,8,7,6,.....)
+            star += "*"; //? 변수 star에 반복생성된 만큼 *을 넣어줌.
+        }
+        star+="<br>"; //? ifor만큼 <br>을 변수 star에 넣음.
+    }
+    document.write(star);
+}
+
+//todo.5 피라미드 ("&nbsp;") 공백
+function pyramid(){
+    var star = '';
+    for(var i = 1; i<=10; i++){ //? ifor = 1~10 까지 수행
+        for(var e = 10; e >= i; e--){ //? efor = 10~1까지 수행
+            star += '&nbsp;';
+        }
+        for(var s = 0; s < 2*i-1; s++){ //? sfor = i가 들어올떄마다 홀수화 됨.(1,3,5,7,9,11,13,15,17,19)
+            star += "*"; //? 홀수화 된 s의 수치만큼ㅁ 반복해서 *이 들어감.
+        }
+
+        star += '<br>' //? ifor만큼 <br> 을 변수 star에 넣음
+    }
+    document.write(star);
+}
+
+
+//todo.1 구구단 숫자를 입력받아 출력하는 for문.
+function gugudan(){
+    var guguNumb = prompt("구구단숫자를 입력하시오.");
+    for(var i=1; i<=9; i++){
+    document.write(guguNumb + "x" + i + "=" + guguNumb*i + "<br>");}
+}
+
+
+// todo.2 배열의 총 합을 구하기. var data = [10,20,30,40,50];
+function arraySum(){
+    var data = [10,20,30,40,50];
+    var result = 0;
+    for(var i=0; i<data.length; i++){
+        result += data[i];
+
+    }
+    document.write('해당 배열의 총합은 = ' + result);
+}
