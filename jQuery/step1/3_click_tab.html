@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click event</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $('ul li').click(function(){
+                $('ul li').removeClass('active');
+                $(this).addClass('active');
+
+                
+                $('ol li').removeClass('active');
+                $('ol li').eq($(this).index()).addClass('active');
+
+                // if($('ul li').hasClass('active')){
+                //     $('ul li').removeClass('active');
+                // }else{
+                //     $(this).addClass('active');
+                // }
+            });
+        });
+
+        // $('선택자').click() 선택자 클릭 이벤트
+        // $('선택자').addClass('클래스명');
+        // 선택자에게 Class('클래스명')추가
+
+        // $('선택자').removeClass('클래스명');
+        // 선택자에게 Class('클래스명')제거
+
+        // $('선택자').eq('순서');
+        // 선택자가 여러개인 상태에서 해당 인덱스('숫자')번쨰 선택자를 선택
+
+        // $('선택자').hasClass('클래스명');
+        // 선택자가 Class('클래스명')를 가지고 있으면 ture,
+        // 선택자가 Class('클래스명')를 가지고있지 않다면 false
+    </script>
+    <style>
+        * {margin: 0; padding: 0;}
+        ul,ol{list-style: none;}
+        ul{
+            display: flex;
+        }
+        ul li {
+            font-size: 50px;
+            flex: 1;
+            text-align: center;
+            border: 1px solid #333;
+
+        }
+
+        ul li.active{
+            background-color: slategrey;
+        }
+        ol li{
+            display: none;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+            height: 500px;
+        }
+
+        ol li.active {
+            display: flex;
+        }
+
+        ol li:first-child{background-color: orangered;}
+        ol li:nth-child(2){background-color: lightgoldenrodyellow;}
+        ol li:last-child{background-color: green;}
+    </style>
+</head>
+<body>
+    <ul>
+        <li class="active">menu1</li>
+        <li>menu2</li>
+        <li>menu3</li>
+    </ul>
+    <ol>
+        <li class="active">content1</li>
+        <li>content2</li>
+        <li>content3</li>
+    </ol>
+</body>
+</html>
