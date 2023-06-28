@@ -8,11 +8,43 @@
     <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
     <script>
         $(document).ready(function(){
-
+            $('.menuBtn').click(function(){
+                // console.log("hi");
+                $('.menuBtn').toggleClass('active');
+            });
         });
     </script>
     <style>
-        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .menuBtn {
+            position: fixed;
+            right: 50px;
+            top: 50px;
+            width: 50px;
+            
+        }
+
+        .menuBtn span {
+            display: block;
+            height: 5px;
+            background-color: #333;
+            margin-bottom: 10px;
+            transition-duration: 0.5s;
+            
+        }
+
+        .menuBtn.active span:nth-child(1){
+            transform: translateY(15px) rotate(45deg);
+        }
+        .menuBtn.active span:nth-child(2){
+            background-color: transparent;
+        }
+        .menuBtn.active span:nth-child(3){
+            transform: translateY(-15px) rotate(-45deg);
+        }
     </style>
 </head>
 <body>
