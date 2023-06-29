@@ -29,7 +29,7 @@
     
     function sumParam(num1,num2){
         var result = num1 + num2;
-        alert("두 수의 합은 =" + result);
+        // alert("두 수의 합은 =" + result);
     }
 
     //*exp.3 매개변수의 자리가 없어도 있는것처럼 .... arguments(가변인자함수 - 배열은 아니지만 배열처럼 사용하면 된다.)
@@ -63,3 +63,74 @@
 
         //* (매개변수가 초과 됐을 시) 또한 원래 함수의 매개변수보다 적게 입력하면 undefined를 출력한다.
      */
+
+
+        function sumReturn1(num1,num2){
+            var result = num1 + num2;
+            return result;
+        }
+
+        //* exp.6 무한 루프를 돌며 숫자를 입력받고 입력받은 수의 합을 화면에 출력하는 함수를 만들어보자.
+        // ! 단 입력값이 0이면 즉시 실행을 멈추게 된다.
+        function infiniteSum(){
+            var sum = 0;
+            var count = 1;
+            while(true){
+                var value = parseInt(prompt("숫자만 입력가능."));
+                if(value == 0){
+                    document.write("종료");
+                    break; // ? return 은 함수를 빠져나오지만, break는 루프를 빠져나오기때문에 
+                           // ? "총 " + count+"번 실행함." 구문이 출력가능.
+                }
+
+                sum += value;
+                document.write(count+". "+sum+"<br>");
+                count++;
+            }
+            document.write("총 " + count+"번 실행함.");
+        }
+
+        // todo.1 구구단 출력을 함수로 만들기.
+        function printGugudan(){
+            for(var i = 2; i <= 9; i++){
+                document.write(i + "단 출력", "<br>");
+                for(var m = 1; m<=9; m++){
+                    document.write(i + "*" + m + "=" + (i*m), "<br>");
+                }
+            }
+            document.write("<br>");
+        }
+
+
+        // todo.2 다음실행구문으로 전달받은 매개변수로 계산하여 결과를 출력하는 함수 만들기.
+        //* 실행구문
+        document.write("1 결과 =" + calculator("+", 20, 10)); //? 30
+        document.write("2 결과 =" + calculator("-", 20, 10));
+        document.write("3 결과 =" + calculator("*", 20, 10));
+        document.write("4 결과 =" + calculator("/", 20, 10));
+        document.write("5 결과 =" + calculator("%", 20, 10));
+        "잘못된 연산자 입니다."
+
+        function calculator(op,numb1,numb2){
+            var result = '';
+            switch(op){
+                case "+" :
+                    result = numb1+numb2;
+                    break;
+                case "-" :
+                    result = numb1-numb2;
+                    break;
+                case "*" :
+                    result = numb1*numb2;
+                    break;
+                case "/" :
+                    result = numb1/numb2;
+                    break;
+                default:
+                    result = "잘못된 연산자 입니다.";
+                    break;
+            }
+        }
+
+
+
