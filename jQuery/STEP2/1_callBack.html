@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>callback 함수 다루어 로딩 부분 만들기</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js" integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0=" crossorigin="anonymous"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        button{
+            outline: none;
+            width: 300px;
+            height: 100px;
+            border-radius: 40px;
+            background-color: white;
+            border: 2px solid orangered;
+            color: orangered;
+            font-size: 30px;
+        }
+
+        button:hover {
+            color: white;
+            background-color: orangered;
+        }
+
+        button:after{
+            content: "눌러봐";
+        }
+
+        .onclic {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border-color: #bbb;
+            border-width: 3px;
+            font-size: 0;
+            border-left-color: orangered;
+            animation: rotating 2s 0.25s linear infinite;
+        }
+
+        .onclic:hover {
+            color: orangered;
+            background-color: white;
+        }
+
+        .onclic:after{
+            content: "";
+        }
+
+        @keyframes rotating {
+            from{
+                transform: rotate(0deg);
+            }to{
+                transform: rotate(360deg);
+            }
+        }
+
+        .finclic{
+            color: white;
+            background-color: orangered;
+        }
+
+        .finclic::after{
+            content: "잘했어요";
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <button></button>
+    </div>
+    <script>
+        $(function(){
+            $('button').click(function(){
+                $('button').addClass('onclic',finclic);
+            });
+
+            function finclic(){
+                setTimeout(function(){
+                    $('button').removeClass('onclic');
+                    $('button').addClass('finclic', callback);
+                },2250);
+            }
+
+            function callback(){
+                setTimeout(function(){
+                    $('button').removeClass('finclic');
+                },2250);
+            }
+        })
+    </script>
+</body>
+</html>
