@@ -11,6 +11,10 @@
             var $hoverBar = $('#hoverBar');
             $('nav a').hover(function(){
                 $hoverBar.show();
+                $hoverBar.css({
+                    left : $(this).position().left + parseInt($(this).css('padding-left')) + 'px',
+                    width : $(this).width() + "px",
+                })
                 
             },function(){
                 $hoverBar.hide();
@@ -42,7 +46,7 @@
             bottom: -8px;
             background-color: #333;
             height: 4px;
-            width: 100px;
+            width: 0;
             transition: 0.5s;
         }
     </style>
